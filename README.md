@@ -38,6 +38,7 @@ Your API will return:
 
 Sample response: 
 
+Happy path: 
 
 ```json
 { 
@@ -56,7 +57,21 @@ Sample response:
 
 ```
 
-### Sad Path - Movie with no dog or tied vote
+Sad Path: no query provided
+
+```json
+{ 
+   "errors": {
+      [
+         "Movie title is required."
+      ]
+   },
+   "status": "400"
+}
+
+```
+
+### Movie with no dog or tied vote
 
 `GET /api/v1/movie?title=Homeward+Bound`
 
